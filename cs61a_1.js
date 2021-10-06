@@ -16,7 +16,6 @@ function a_plus_abs_b(a,b) {
 	return f(a, b);
 }
 let z = a_plus_abs_b(x,y);
-console.log(z);
 
 
 function two_of_three(x, y, z){
@@ -35,8 +34,6 @@ function two_of_three(x, y, z){
     return x*x + y*y + z*z - Math.max(x*x, y*y, z*z);
 }
 // Hint: Consider using the Math.max or Math.min function!
-
-console.log(two_of_three(5, 3, 1));
 
 
 function largest_factor(n){
@@ -87,8 +84,6 @@ function hailstone(n){
     return sequences;
 }
 
-console.log(hailstone(10));
-
 
 function product(n, term){
 	/* Return the product of the first n terms in a sequence.
@@ -119,8 +114,6 @@ function product(n, term){
 function square(x) {
     return x * x;
 }
-
-console.log(product(5, square));
 
 
 
@@ -153,6 +146,3 @@ function accumulate(merger, base, n, term){
     }
     return total;
 }
-
-console.log(accumulate((x, y) => {return x + y + 1}, 2, 3, square));
-
