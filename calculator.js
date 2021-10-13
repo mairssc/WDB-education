@@ -42,7 +42,7 @@ function nextOperation(a, b) {
 function truncate(num) {
     if (num === 0) {
         return num;
-    } else if (num < 0 && Math.abs(num) >= 1 && Math.abs(num) <= 9) {
+    } else if (num < 0 && (Math.abs(num) >= 1 && Math.abs(num) <= 9)) {
         return 0;
     }
     else {
