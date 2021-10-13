@@ -42,11 +42,10 @@ function nextOperation(a, b) {
 function truncate(num) {
     if (num === 0) {
         return num;
-    } else if (num < 0 && (Math.abs(num) >= 1 && Math.abs(num) <= 9)) {
+    } else if (Number.isInteger(num) && num > 0) {
+        return Math.floor(num/10);
+    } else {
         return 0;
-    }
-    else {
-        return Number(num.toString().slice(0, -1));
     }
 }
 
