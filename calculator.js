@@ -39,6 +39,16 @@ function nextOperation(a, b) {
     return b;
 }
 
+function truncate(num) {
+    if (num === 0) {
+        return num;
+    } else if (num < 0 && Math.abs(num) >= 1 && Math.abs(num) <= 9) {
+        return 0;
+    }
+    else {
+        return Number(num.toString().slice(0, -1));
+    }
+}
 
 for (var i = 0; i < buttons.length; i++) {
     let curButton = buttons[i];
@@ -77,7 +87,7 @@ for (var i = 0; i < buttons.length; i++) {
             })
         } else if (curKey === '←') {
             curButton.addEventListener("click", function() {
-                displayNumber = Math.floor(displayNumber/10);
+                displayNumber = truncate(displayNumber);
                 resultScreen.innerText = displayNumber.toString();
             })
         }
